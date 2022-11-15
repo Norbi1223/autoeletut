@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/autorogzites', function () {
+    return view('autorogzites');
+});
+Route::get('/tulajrogzit', function () {
+    return view('tulajrogzit');
+});
+Route::get('/balesetrogzites', function () {
+    return view('balesetrogzites');
+});
