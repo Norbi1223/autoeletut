@@ -21,7 +21,7 @@
                     <td>{{$item->szin}}</td>
                     <td>
                         <form method="POST">
-                            <button type="button" class="btn btn-info" onclick="">Részletek</button>
+                            <button type="button" class="btn btn-info" onclick="reszletek()">Részletek</button>
                         </form>
                     </td>
                 </tr>
@@ -30,4 +30,9 @@
         </div>
     </div>
 </div>
+<script>
+    function reszletek(){
+        
+    }
+</script>
 @endsection
