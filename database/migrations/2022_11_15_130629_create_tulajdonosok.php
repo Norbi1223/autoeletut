@@ -15,7 +15,7 @@ class CreateTulajdonosok extends Migration
     {
         Schema::create('tulajdonosok', function (Blueprint $table) {
             $table->id("t_id");
-            $table->string("tulajdonos_neve");
+            $table->string("tulajdonos_neve",50);
             $table->date("tulajdonjog_kezdete");
             $table->date("tulajdonjog_vege");
         });

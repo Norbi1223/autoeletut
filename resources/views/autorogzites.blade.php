@@ -15,7 +15,7 @@
                 @endif
                 <div class="m-2 p-1">
                 <label for="rendszam"><b>Rendszám:</b></label>
-                <input type="text" name="rendszam" id="rendszam" class="form-control">
+                <input type="text" name="rendszam" id="rendszam" class="form-control" value="{{old('rendszam')}}">
                 @error('rendszam')
                     <div class="alert alert-danger">
                         {{$message}}
@@ -24,7 +24,7 @@
                 </div>
                 <div class="m-2 p-1">
                     <label for="tipus"><b>Típus:</b></label>
-                    <input type="text" name="tipus" id="tipus" class="form-control">
+                    <input type="text" name="tipus" id="tipus" class="form-control" value="{{old('tipus')}}">
                 
                 @error('tipus')
                     <div class="alert alert-danger">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="m-2 p-1">
                     <label for="szin"><b>Szín:</b></label>
-                    <input type="text" name="szin" id="szin" class="form-control">
+                    <input type="text" name="szin" id="szin" class="form-control" value="{{old('szin')}}">
                 
                 @error('szin')
                     <div class="alert alert-danger">

@@ -8,13 +8,28 @@
         <div class="col">
             <form method="POST">
                 @csrf
+                @if (session() -> get('kesz'))
+                    <div class="alert alert-success m-2">
+                        {{session() -> get('kesz')}}
+                    </div>
+                @endif
                 <div class="m-2 p-1">
                     <label for="balido"><b>Baleset időpontja:</b></label>
-                    <input type="datetime" name="balido" id="balido" class="form-control">
+                    <input type="date" name="balido" id="balido" class="form-control" value="{{old('balido')}}">
+                    @error('balido')
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
                 <div class="m-2 p-1">
                     <label for="serules"><b>Sérülés leírása:</b></label>
-                    <input type="text" name="serules" id="serules" class="form-control">
+                    <input type="text" name="serules" id="serules" class="form-control" value="{{old('serules')}}">
+                    @error('serules')
+                    <div class="alert alert-danger">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
                 <div class="m-2 p-1">
                     <button type="submit" class="btn btn-success">Rögzítés</button>
