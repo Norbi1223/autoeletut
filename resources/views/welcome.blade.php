@@ -32,7 +32,7 @@
 </div>
 <script>
     function reszletek(){
-        
+         
     }
 </script>
 @endsection
