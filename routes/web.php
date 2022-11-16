@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Autorogzites;
+use App\Http\Controllers\Tulajrogzit;
+use App\Http\Controllers\Balesetrogzites;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/autorogzites', function () {
-    return view('autorogzites');
-});
-Route::get('/tulajrogzit', function () {
-    return view('tulajrogzit');
-});
-Route::get('/balesetrogzites', function () {
-    return view('balesetrogzites');
-});
+
+Route::get('/autorogzites',[autorogzites::class, "bekuld"]);
+Route::post('/autorogzites',[autorogzites::class, "rogzit"]);
+
+Route::get('/tulajrogzit', [tulajrogzit::class, "bekuld"]);
+Route::post('/tulajrogzit', [tulajrogzit::class, "rogzit"]);
+
+Route::get('/balesetrogzites', [balesetrogzites::class, "bekuld"]);
+Route::post('/balesetrogzites', [balesetrogzites::class, "rogzit"]);
+

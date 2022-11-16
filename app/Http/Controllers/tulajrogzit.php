@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class tulajrogzit extends Controller
 {
-    //
+    public function bekuld(){
+        return view('tulajrogzit');
+    }
 }

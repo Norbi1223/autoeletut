@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class autorogzites extends Controller
 {
-    //
+    public function bekuld(){
+        return view('autorogzites');
+    }
 }
